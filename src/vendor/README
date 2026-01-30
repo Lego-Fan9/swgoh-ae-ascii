@@ -1,0 +1,7 @@
+This is https://www.npmjs.com/package/asciify-image
+
+License is ISC
+
+Changes made: 
+- Make it a standard ESM Module instead of CommonJS
+- Add setChars
