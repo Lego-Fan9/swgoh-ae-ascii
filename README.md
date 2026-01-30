@@ -12,19 +12,20 @@ $ cd AssetWebApi
 $ dotnet publish "AssetWebApi.csproj" -c release -o ../build --no-restore
 $ cd ../build
 $ set DISABLE_HTTPS_REDIRECT="true" # On Linux use export instead of set
-$ dotnet AssetWebApi.dll
+$ AssetWebApi.exe
 ```
 
 Now to build SWGoH-AE-ASCII run
 ```
 $ git clone https://github.com/Lego-Fan9/swgoh-ae-ascii.git
+$ cd swgoh-ae-ascii
 $ npm install
 $ npx tsc
 ```
 
 Now to run it,
 ```
-$ node dist/index.js -ae <ASSET_EXTRACTOR_URL> -assetName <ASSET_NAME> -assetVersion <ASSET_VERSION>
+$ node dist/index.js --ae <ASSET_EXTRACTOR_URL> --assetName <ASSET_NAME> --assetVersion <ASSET_VERSION>
 ```
 Where <ASSET_EXTRACTOR_URL> is the url that was output when you started Asset Extractor, <ASSET_NAME> is the name of the asset you are downloading, ex: charui_b1, and <ASSET_VERSION> is the current asset version, which can be obtained through comlink. 
 
